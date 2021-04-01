@@ -1,0 +1,13 @@
+{% extends 'headerPage.html' %}
+
+{% block content%}
+
+{% for i in listOfImagesPath %}
+<center>
+<img src={{i}} style="width: 500px;"> <br> <br>
+</center>
+{% endfor%}
+
+
+
+{% endblock %}

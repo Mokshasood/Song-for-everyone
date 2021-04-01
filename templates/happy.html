@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<style>
+	.c {
+		background-color: orange;
+		color: green;
+		text-align: center;
+	}
+	.Button {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 300px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  background-color: lightgreen;
+  border-radius: 8px;
+  }
+	.Button:hover {
+  background-color: #4CAF50;
+  color: white;
+  }
+  .a{
+  	color: black;
+  	text-decoration: none;
+  }
+  .a:hover {
+  	color: white;
+  	text-decoration: none;
+  }
+</style>
+<body class="c">
+<h1> Feeling Happy? 😁</h1>
+<h3> Here are some recommendations to help you celebrate! 🥳</h3>
+<ul id="lister" style="list-style-type:none;">
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=9-AKLAfpjrI" target="_blank" class="a">Khairiyat</Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=8ofCZObsnOo" target="_blank" class="a">Hold On</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=V1Pl8CzNzCw" target="_blank" class="a">Lovely</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=VY1eFxgRR-k" target="_blank" class="a">Come Back</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=fRh_vgS2dFE" target="_blank" class="a">Sorry</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=4iNC0NXKyNE" target="_blank" class="a">Stitches</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=rtOvBOTyX00" target="_blank" class="a">A Thousand Years</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=bsSK1DccV_Y" target="_blank" class="a">Havana</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=NlrYn_dZdqk" target="_blank" class="a">Crying In The Club</a></Button></li>
+    <li><Button class="Button"><a href="https://www.youtube.com/watch?v=NZKXkD6EgBk" target="_blank" class="a">Liar</a></Button></li>
+	</ul>
+</body>
+<script>
+	var ul = document.querySelector('#lister');
+	var max = 5;
+
+	for (var i = ul.children.length; i >= 0; i--) {
+	    if(ul.children.length - i > max) {
+	        ul.removeChild(ul.children[i]);
+	    } else {
+	        ul.appendChild(ul.children[Math.random() * i | 0]);
+	    }
+	}
+	
+</script>
+</html>
